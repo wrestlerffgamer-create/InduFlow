@@ -1,6 +1,6 @@
-# FlowForge
+# InduFlow
 
-FlowForge is a role-based industrial workflow management application for the fixed pipeline **Design → Production → Quality Checking → Dispatch**. It helps an industrial team track an order from creation through dispatch, surface late stages, and give every role the information and controls appropriate to it.
+InduFlow is a role-based industrial workflow management application for the fixed pipeline **Design → Production → Quality Checking → Dispatch**. It helps an industrial team track an order from creation through dispatch, surface late stages, and give every role the information and controls appropriate to it.
 
 ## What it does
 
@@ -37,7 +37,7 @@ The supported head roles are `design_head`, `production_head`, `quality_head`, a
 
 ## Local setup
 
-1. Create a PostgreSQL database named `flowforge`.
+1. Create a PostgreSQL database named `InduFlow`.
 2. Copy [`backend/.env.example`](backend/.env.example) to `backend/.env` and set a real database URL and a long random JWT secret. Do not commit this file.
 3. Install dependencies in both applications:
 
@@ -70,7 +70,7 @@ Open the frontend URL printed by Vite (normally `http://localhost:5173`) and sig
 
 ## Workflow behaviour
 
-When an admin creates an order, its Design stage starts immediately. A stage has an expected duration in hours. FlowForge checks active stages every five minutes by default (`DELAY_CHECK_INTERVAL_MS`) and marks an overdue stage as delayed once. Completing a delayed stage is still possible. When all active workers in that stage have completed their own progress item, FlowForge completes the stage, creates an audit entry, activates the next department, and notifies it. The final Dispatch completion marks the order completed.
+When an admin creates an order, its Design stage starts immediately. A stage has an expected duration in hours. InduFlow checks active stages every five minutes by default (`DELAY_CHECK_INTERVAL_MS`) and marks an overdue stage as delayed once. Completing a delayed stage is still possible. When all active workers in that stage have completed their own progress item, InduFlow completes the stage, creates an audit entry, activates the next department, and notifies it. The final Dispatch completion marks the order completed.
 
 ## API overview
 
