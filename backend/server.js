@@ -22,7 +22,7 @@ app.use(express.json());
 
 
 app.get("/", (_req, res) => {
-  res.json({ name: "FlowForge API", status: "ok" });
+  res.json({ name: "InduFlow API", status: "ok" });
 });
 
 

@@ -13,7 +13,7 @@ function AppShell({ title, children }) {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <Link className="brand" to="/">FlowForge</Link>
+        <Link className="brand" to="/">InduFlow</Link>
         <div className="user-menu">
           <span>{user?.name} · {role}</span>
           <button className="button secondary" onClick={signOut}>Sign out</button>

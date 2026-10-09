@@ -52,7 +52,7 @@ function Login() {
     <main className="auth-page">
       <section className="auth-card">
       <p className="eyebrow">Industrial workflow management</p>
-      <h1>FlowForge</h1>
+      <h1>InduFlow</h1>
       <p>Sign in to view the work that needs your team.</p>
 
       <form onSubmit={handleSubmit}>
